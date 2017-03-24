@@ -12,11 +12,16 @@ class PostsController < ApplicationController
     @post.user = current_user
 
     if @post.save
-      redirect_to group_path(@group)
+      redirect_to group_posts_path(@group)
     else
       render :new
     end
  end
+
+
+
+
+
 
 
 private
